@@ -1,0 +1,271 @@
+Developer Skills & Editor SetUp
+===============================================================================================================================
+Section Intro
+
+  -how to learn to code
+  -how to think as a developer.
+  -how to debug the code incase you run into problem
+  -professional development environment on your computer.
+===============================================================================================================================
+Section RoadMap
+===============================================================================================================================
+Setting up prettier and VSCode
+  -prettier
+    -it is an opinionated code formatter.
+    -makes assumptions about how good code looks like.
+
+    -install prettier from vscode extensions
+
+    -settings -> search "default formatter" ->select 'prettier code formatter' to enable it on vscode
+
+    -remove the blank lines, add "" instead of '' and add a blank line at the end.
+
+  -format on save
+    -ticked
+    -formats the code when we/autosave save it.
+
+  -configuring prettier for '' to remain as it is and dont convert it into "".
+    -search prettier in browser, read doc  ==>https://prettier.io/docs/en/.
+    -create a new file in current folder
+      -create file named ".prettierrc"
+      -then { "singleQuote": true}
+
+    -now prettier wont convert "" into '' for that folder.
+
+  -arrow function adds single parameter into (). to change this we use.
+    "arrowParens": "avoid" in .prettierrc
+
+    "always" - Always include parens. Example: (x) => x
+    "avoid" - Omit parens when possible. Example: x => x
+
+--------------------------------------
+Dealing with console.log()
+  -snippets
+    -settings->user snippets ->new global snippets file.
+    -file named as "yogesh.code-snippets"
+      {
+          "Print to console": {
+          "scope": "javascript,typescript",
+          "prefix": "cl",
+          "body": [ "console.log();" ],
+          "description": "Log output to console"
+        }
+      }
+
+    -with $1 autocomplete of variable name doesnot work hence removed
+    -with $1 cursor will be inside the ().
+    **tip-dont use this as console.log is important to practice.
+
+Todo highlight extenstion
+  -to highlight some spectified text with color.
+  -settings->settings.json -> todohighlight...kaywords..text..color..backgroundcolor
+
+===============================================================================================================================
+Installing Node.js and setting up a dev environment
+
+Use Liver server extenstion of vscode -> no need to manually to reload the browser.
+
+Running live server using Node.js which javascript runtime environment.
+
+Use Node.js
+  -install node.js -  use npm package called live server
+  -check 
+    node -v -> to check if node.js installed or not by checking version of node.js
+
+  -installed v20.10.0 LTS version of node.js
+  **TIP-always remember to restart vscode after installation.
+terminal
+  -a way of giving instructions to computer.
+
+  -NPM 
+    -it is a node package manager.
+    -program to download tools
+
+  - => npm install live-server -g
+          installing live-server package as global using -g with the help npm package manager.
+  - => live-server
+          to start live server 
+          It will open the folder and open index.html file by default hence we name our file as index.html as our starting file.
+
+  **TIP select node instead bash when you open a termial.
+
+
+  NODEJS is installed in D:/Node JS Installer folder.
+
+  http://127.0.0.1:57549/Code/
+
+      Port 8080 is occupied
+
+===============================================================================================================================
+Learning How to Code
+  Set you aim.
+  take your time.
+  reinforce your learnings.
+  always understand and then type code.
+  take challenges => codewars website for challenges.
+  come up with your own challenges.
+  make own big projects idea.
+
+
+  **TIP coding is hard. with time you will learn. Keep challenging yourself by making big projects yourself.
+  **learning never stops.
+===============================================================================================================================
+How to think like a Developer : Become a problem Solver!
+
+  When solving a problem always stay calm.
+  Make a plan.
+  take logical and rational approach.
+
+  4 steps to solve a problem.
+    -100% understand the problem ,ask right questions and get a clear picture.
+    -Divide and conquer, divider your problem into small steps. and them try to solve it.
+    -don't be afraid of researching something, take time. (not exceeding more :)
+    -write pseudo code and try to check whether it works or not. and then write your solution code.
+
+===============================================================================================================================
+Using Google, stackoverflow and mdn-
+  -Start searching on topic first approach 
+    e.g. javascript how to find min in array. ->refer either MDN doc or stackoverflow.
+
+
+  
+// --------Using Google, StackOverflow and MDN to Solve a Problem-------------------------------------------------------------
+
+// Problem 1
+  We work for a company building  a smart home thermometer. Our most recent task is this: 
+  "Given an  array of tempratures of one day. calculate the temprature amplitude.
+   Keep in mind that sometimes there might be a sensor error. 
+
+1)understanding the problem.
+  a)what is temprature amplitude
+    difference between highest and lowest temprature.
+  b)how to calculate max and min temprature.
+  c)what is sensor error? what to do with it.
+
+2)Breaking up into sub problems.
+  a)how to ignore error.
+  b)Find max value in temps array.
+  c)Find min value in temps array. 
+  d)subtract min from max (amplitude) and return it.
+//
+//
+//
+//
+//
+//
+const temps = [3,-2,-6,-1,'error',9,13,17,15,14,9,5];
+
+const calcTempAmplitude = function (temps) {
+  let min = temps[0],
+    max = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+     if (typeof temps[i] !== 'number') {
+      continue;
+    }
+    if (temps[i] < min) min = temps[i];
+
+    if (temps[i] > max) max = temps[i];
+  }
+
+  console.log(max, min);
+
+  return max - min;
+};
+
+console.log(calcTempAmplitude(temps));
+//
+//
+//
+//
+//
+//
+// Problem 2
+Function should recieve two arrays of temps.
+Here we need to add one more array without disturbing the previous implementation.
+
+solution  
+  find functionality two merge two arrays.
+//
+//
+//
+//
+//
+//
+const t1 = [4, 1, 0];
+const t2 = [3, 9, 1];
+
+const calcTempAmplitudeNew = function (t1, t2) {
+  //array concat to add two arrays. (ES5)
+  const temps = t1.concat(t2);
+
+  let min = temps[0],
+    max = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+     if (typeof temps[i] !== 'number') {
+      continue;
+    }
+    if (temps[i] < min) min = temps[i];
+
+    if (temps[i] > max) max = temps[i];
+  }
+
+  console.log(max, min);
+
+  return max - min;
+};
+
+console.log(calcTempAmplitudeNew(t1, t2));
+
+===============================================================================================================================
+Debugging and fixing errors-
+
+Identify->find->fix-prevent
+===============================================================================================================================
+Debugging with the console and Breakpoints
+
+console.log();
+console.warn(); //to shown yellow color as warning
+console.error(); //to show errors
+
+console.table() //for seeing object values in formatted table.
+
+
+Breakpoints;
+  goto browser->sources (dev tools)->breakpoints
+  breakpoints will be set by clicking on left bar
+
+  debugger;
+    javascript has debugger statement where this will open the deb tool in dev tool and 
+    set breakpoint where debugger is mentioned
+===============================================================================================================================
+Coding Challenge #1
+
+Given an array of forecasted temperatures,
+the thermometer displays a string with these temperatures.
+
+Example: [17,21,23] will print 
+"...17&degree C in 1 days ... 21&degree in 2 days and 23&degree in 3 days ..."
+
+create a function 'printForecast' which takes in an array 'arr' and loops a string like the above to the console.
+
+Use the problem-solving framework: Understand the problem
+and break it up into sub-problem!
+
+Test Data 2: [12,5,,-5,0,4]
+
+Problem Solving-
+  First Understand the problem-
+  divide into subproblems.
+  find,research,
+  resolve.
+  code.
+
+  1 step create function.
+  2 create loop to traverse array.
+  3 print the string.
+    a)how to find degree symbole and print it.
+      -search on google ℃
+
+===============================================================================================================================
