@@ -1,0 +1,388 @@
+========================================================================================================================
+section intro
+========================================================================================================================
+activating strict mode-
+
+helps to write secure javascript code
+
+'use strict'
+  -at the beggining of the javascript file
+  -has to at the beggining else strict mode will not get activated file entire file
+  -although we can activate strict mode for the specfic block or specific function
+  -avoid bugs to get into our code 
+  -shows visible errors in develpoer consoles
+
+**
+  JavaScript's strict mode was introduced in ECMAScript 5. 
+  It enforces stricter parsing and error handling on the code at runtime. 
+  It also helps you write cleaner code and catch errors and bugs that might otherwise go unnoticed.
+========================================================================================================================
+
+functions
+
+piece of code that we can reuse in our code by calling that function.
+
+function parameteres
+  -JavaScript functions do not perform type checking on the passed arguments. 
+  -JavaScript functions do not check the number of arguments received.
+  -parameters get defined once we call the function.
+
+functions are used to write more maintanable code
+function code can reused over and over again.
+
+function hey(//parameters list type defined when calling a function by passing a value)
+{
+  //function body;
+  //return a value from function using 'return '
+}
+hey(//argument list); //calling a function
+
+========================================================================================================================
+
+Function declaration vs expressions (anonymous functions)
+
+-function without  name is called a anomnous function -expression
+-function is a value if it produces a result or value hence called expression
+
+Function Declaration
+in function declaration we call a function before declaring it
+
+Function Expression
+in function expressions or anonymous function we cannot call a function before declaration 
+hence it must call after declaring function definition.
+
+**above thing happens because of Hoisting
+========================================================================================================================
+
+Arrow Functions
+
+third type of funnction that was added to the javascript in ES6
+
+for one liner function-
+  -it is a simple and shorter form of function expression hence easy to write
+  -it also has value hence it is a expression
+  -return happens implicitly we dont need to write return explictly
+  -good for one liner functions
+  -e.g. const hey= one_parameter => one_parameter-12;
+
+multiline function
+  -we use curly braces
+  -we use return statement
+  -e.g. const hey = one_parameter => {
+    int age=23;
+    return 2022-age-one_parameter;
+  }
+
+multiparameter arrow function
+  -here we use ()
+  -e.g. const hey = (first_paramter,second_paramter) =>{
+    return first_parameter-second_parameter
+  }
+
+  **-arrow functions does not get "this" pointer
+========================================================================================================================
+
+function calling another function
+
+  -when one function calls another function for using its functionality repeatatedly if needed.
+  -helps in achieving reusability concept.
+
+========================================================================================================================
+reviewing functions
+
+  -alt+ uparrow key ->to move current statement up
+  -crtl+ to selected all the copies for the selected text
+
+  -function is called or invoked by using functionName and ()
+  with only function name if you log it to console you will get function code 
+
+  -emoji - [windows] + [.] 
+========================================================================================================================
+Challenge #1
+
+CHALLENGE #1
+Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+
+A team only wins if it has at least double the average score of the other team. Otherwise, no team wins!
+
+
+
+Your tasks:
+
+Create an arrow function calcAverage to calculate the average of 3 scores. This function should have three parameters and return a single number (the average score).
+
+Create two new variables — scoreDolphins and scoreKoalas, and assign the value returned from the calcAverage function to them (you will need to call this function, and pass scores as arguments).
+
+Create a function checkWinner that takes the average score of each team as parameters (avgDolphins and avgKoalas), and then logs the winner to the console, together with the victory points, according to the rule above. Example: Koalas win (30 vs. 13) (use avgDolphins and avgKoalas instead of hard-coded values).
+
+Use the checkWinner function to determine the winner for both DATA 1 and DATA 2.
+
+Ignore draws this time. Instead, log No team wins... to the console if there is no winner.
+
+
+
+TEST DATA 1: Dolphins scored 44, 23, and 71. Koalas scored 65, 54, and 49.
+
+TEST DATA 2: Dolphins scored 85, 54, and 41. Koalas scored 23, 34, and 27.
+
+
+
+👋 OPTIONAL: You can watch my solution in video format in the next lecture
+========================================================================================================================
+***Data Structure***
+Arrays-
+
+  ways to create array
+    const arr= ['','']=> literal syntax
+    const arr=new Array(1,2,3,4,expression);
+
+  -uses 0-based indexing
+  -we use arr[index] to access individual array element
+  -to get length of array -> arr.length 
+  -only primitive values once declared with const cannot be changed but as array is a primitive datatype hence we
+    can change array elements using index and [] ,obviuosly we cannot again initialize the array with const.
+    e.g. arr[2]=20; but arr=[300,300] ->will give error   
+
+  -//0 based indexing for array any expression can be passed to array
+  
+  -in javascript array can be used to store any javascript datatype e.g. objects, primitive data type,another array as well
+========================================================================================================================
+Basic Array operations
+
+friends=['ken','july']
+
+Methods
+1)push
+  - friends.push( 'Jay') ->will push Jay at the end of array.
+  -push method return a new array length
+
+2)unshift
+  -friends.unshift('rock') ->will add array at the beggining.
+  -unshift method return a new array length
+
+3)pop 
+  -friends.pop() -will remove element from the last.
+  -pop method returns the removed element
+
+4)shift
+  -friends.shift() -will remove the element from the beggining
+  -shift method returns the removed element
+
+5)indexOf
+  -friends.indexOf('july') -will return the index of passed value.
+  -used to search an element to get the index if element is present then it returns 1 else -1
+
+5)includes (ES 6)
+  -friends.includes('july') -will return true is element present else false
+  -uses strict equality 
+========================================================================================================================
+CHALLENGE #2
+
+Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+Your tasks:
+
+Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+And now let's use arrays! So, create an array called bills containing the test data below.
+
+Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+BONUS: Create an array totals containing the total values, so the bill + tip.
+
+TEST DATA: 125, 555, and 44.
+
+
+
+👋 OPTIONAL: You can watch my solution in video format in the next lecture
+========================================================================================================================
+
+Intoduction to Objects-
+
+objects
+  -it a data Structure javacript just like arrays.
+  -we define key-value pairs there.
+  -Arrays used [] square bracket for declaration as well as index accessing.
+  -obejcts use {} curly braces for declaration of object
+  -key is variable name and value is an expression e.g. value can be array as well 
+  -each key is seperated by ,(semicolon)
+
+  -most fundamental concept in  whole javascript language, many other ways of creating object
+
+  -object literal syntax e.g. 
+    const jonas={
+      firstName='Jonas',
+      friends=['hey','hello'],
+      age=2024-1991
+    }
+  -used to group together related properties using key
+  -object data strcture work same MAP in other programming languages.
+  -when we log the object into console order of key is not as we have declared it i.e. unordered
+========================================================================================================================
+Dot vs. Bracket Notation
+
+how to change and retrieve data in obects using .(dot) and [] notation.
+ . (dot notation) 
+  -member access
+  -left to right higher priority than [] 
+  - we generally used a key after .(dot) operator
+  -we can use . notation to add a property or key to object e.g. jonasObject.location=''portugal'.
+
+[]
+  -computed member access
+  -left to right lower priority than .
+  -we can use a expression here which computes a value that matches we key(property_name).
+  -when we need to compute a key we use [] notation.
+  --we can use [] notation to add a property or key to object e.g. jonasObject["location"]=''portugal'.
+
+
+To get a value from user inteface we use prompt function.
+  -prompt("Enter the value")
+  -this will create a popup window with input field
+
+
+We get undefined when we try to access a property of object that does not exists.
+
+alt + arrow up or down ->to move the current line up or down.
+========================================================================================================================
+
+Object Methods
+
+  -we can use function expressions with key containing function expression in obeject
+    as function expression returns a value which is tobe assgined to a key or property of object.
+
+this keyword
+  -hold an object on which the method was called.
+  -equal to the object calling method.  
+  -always try to use the reference of object calling the method and not to hardcode the object name.
+
+**As array's have method which we used previously hence array's are also objects.
+
+========================================================================================================================
+Challenge #3
+
+CHALLENGE #3
+Let's go back to Mark and John comparing their BMIs!
+
+This time, let's use objects to implement the calculations! Remember: BMI = mass / (height * height) (mass in kg and height in meters).
+
+Your tasks:
+
+For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith). Name these objects as mark and john, and their properties exactly as fullName, mass and height.
+
+Create a calcBMI method on each object to calculate the BMI (the same method on both objects). Assign the BMI value to a property, and also return it from the method.
+
+Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+
+TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+
+
+👋 OPTIONAL: You can watch my solution in video format in the next lecture
+
+
+
+IMPORTANT: The ** operator is not supported in this editor. Please make sure to use exactly this formula mass / (height * height), and not this one mass / (height ** 2)
+========================================================================================================================
+
+Iteration: The for Loop
+
+
+Loops
+  -Fundamental aspect of every programming language.
+  -to do repetitive tasks again and again.
+
+for Loop
+  -keeps running while the condition is true.
+  -for( let rep=1;rep<=10;rep++)
+  {
+    //repeating statements
+  }
+========================================================================================================================
+
+Looping Arrays, Breaking and Continuing
+
+Application of for Loop
+  -loop through arrays
+
+Creating an empty array 
+  -e.g. let arr=[];
+
+continue statement-
+  -continue
+  -to move to the next iteration.
+break statement
+  -break
+  -to break the current loop.
+========================================================================================================================
+Looping Backwards and Loops in Loops
+
+traversing Backwards starting from last index of array to 0th index.
+Syntax:
+for(let i;;){
+  for(let j=0;;)
+  {
+    i=j
+  }
+}
+
+//entry controlled loop
+========================================================================================================================
+The While Loop
+
+  -used when we do not now number of iterations beforehand.
+Syntax:
+
+let i=0;
+while(i<10)
+{
+  i++
+}
+//entry controlled loop.
+
+Math.random()
+  The Math.random() static method returns a floating-point, pseudo-random number that's 
+  greater than or equal to 0 and less than 1, with approximately uniform distribution over 
+  that range — which you can then scale to your desired range. 
+
+Math.trunc()
+  The Math.trunc() static method returns the integer part of a number by removing any fractional digits.
+========================================================================================================================
+
+
+CHALLENGE #4
+Let's improve Steven's tip calculator even more, this time using loops!
+
+Your tasks:
+
+Create an array called bills containing all 10 test bill values.
+
+Create empty arrays for the tips and the totals (tips and totals)
+
+Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+
+
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52.
+
+
+
+BONUS:
+
+Write a function calcAverage which takes an array called arr as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it if you feel like it:
+
+First, you will need to add up all values in the array. To do the addition, start by creating a variable sum that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the sum variable. This way, by the end of the loop, you have all values added together.
+
+To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements).
+
+Call the function with the totals array.
+
+
+
+👋 OPTIONAL: You can watch my solution in video format in the next lecture
+
+This topic is covered in
+
+
