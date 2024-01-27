@@ -1,0 +1,45 @@
+shortcut keys
+
+1)alt+ up or down arrow ->to move up or down the current line in which line arrow is present.
+
+2)shift+ up or down or left or right arrow ->to select the content.
+
+3)ctrl+d ->to select all the same word in a file.
+
+4)ctrl+shift+l -> to point cursor to each selected same word for updating that word just one time only and changes will get reflected to all..
+
+5)shift+ end ->to select entire line starting from current point.
+
+6)ctrl +  '+' ->to increse window size or text size.
+
+7)ctrl + '-' -> to decrease window size or text size.
+
+8)ctrl + d  or [ ctrl + shift+ k ]-> to delete entire line.
+
+9)ctrl_shift ->to switch US to IN keyboard. 
+
+10)ctrl +shift +j ->to open the console in dev tool of browser.
+
+11) ctrl + / ->to comment and uncomment the code.
+
+12)ctrl+shift+end -> to select content from middle somewhere to end of content.
+
+13)'ctrl+a or shift up/down/end ' followed by 'alt+ up/down' ->  select content and then to move that content up and down
+
+14) In dev tool ->alt up/down to increase or decrease the values by 0.1 .
+
+15) alt+ (1st select text) -> alt + (2nd select text) => copy selected text 		
+	=> go to place where you want to paste it 
+		=> alt + (place cursor on location you want to paste 1st selected text) -> alt + (next location for 2 nd selected text)
+
+   **can do this for multiple text.
+
+16)shift +tab =>select content and move it backwards by 1 tab.
+
+17) Alt + 0128 => to get EURO currency symbol
+
+18) [IN VSCODE] Alt + shift+ arrow up/ arrow down =>for copying same content above current line or below current line
+
+19) [IN VSCODE] ctrl + x => to delete entire line
+
+20) [IN VSCODE] ctrl + d =>to select single word where current pointer is.

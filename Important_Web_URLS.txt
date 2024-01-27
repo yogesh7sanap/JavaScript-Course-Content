@@ -1,0 +1,37 @@
+1)Starter and final code and FAQs on GitHub
+
+https://github.com/jonasschmedtmann/html-css-course
+
+2)Resource Page of Instructor
+
+https://codingheroes.io/resources/
+
+3)To copy your code and ask for help
+
+codepen.io
+
+4)validator tool
+
+5)diffchecker 
+
+6) type-scale.com
+
+7)google fonts
+
+8)open colors 
+https://yeun.github.io/open-color/
+
+9)To check contract 
+coolors.com
+
+10)for original images - unsplash ( ,pexels, drawkit)
+
+11) to compress image - squoosh
+
+12) for good icons - phosphor icons, ionicons, icons8
+https://heroicons.com/ =>svg icons
+** -> https://ionic.io/ionicons => ion icons (Also SVG, but less code just include script in head of HTML file)
+
+13) for tints and shades of colors => https://maketintsandshades.com/#e67e22
+
+14) for contract of colors=> https://coolors.co/contrast-checker/cf711f-fdf2e9
