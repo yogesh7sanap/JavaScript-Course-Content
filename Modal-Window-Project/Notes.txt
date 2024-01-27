@@ -1,0 +1,62 @@
+JavaScript In the Browser: DOM and Events fundamentals
+
+=================================================================================================================
+Section Intro:
+
+  Building Projects and DOM Manipulation
+=================================================================================================================
+Section Roadmap
+  All topic are important-
+=================================================================================================================
+=================================================================================================================
+PROECT #2 MODAL WINDOW- 
+
+A pop window which will blur the background.
+closes when we click on ❌ or blur background or esc button on keyboard.
+
+To disconnect the url which is running via nodejs we stop the terminal by ctrl+c
+
+document.querySelector() =>will select only the first element of that class which gets matched.
+document.querySelectorAll() =>this will select all the elements that gets matched.
+
+After this a document.querySelectorAll() will create a nodeList of element and we can iterate over tham using loop
+ust like arrays.
+
+
+=================================================================================================================
+Working with Classes-
+
+document.querySelector('<select element>').classList.remove('<class name without .>') 
+  to remove class from an selected element.
+classList.add()
+  to add class.
+We can also search for a class using classList.
+
+Using these functionality of javascript we can activate and deactivate certain fuctionalities in javascript.
+=================================================================================================================
+Handling 'esc' keypress event 
+
+search for a class in a elmenet-
+
+  keyboard events are global event as they do not happen on specific element.
+
+  
+  Hence we listen on the whole document.
+
+  3 types of event in keyboard events-
+    1- key press - event will occur till the time we are pressing the key 
+    2- key down - whenever we press the key
+    3- key up - whenver we move our finger above the pressed key 
+
+**TIP
+whenver an event happens we will have information about that event in the event handler function.
+
+we can access the event info using a parameter passed to event handler function.
+
+to access which key is press using key property of event object which we have passed to event 
+handler function as parameter which contains all the events details.
+
+keyboard event as global event hence we use addEventListerner on document object
+
+
+=================================================================================================================
